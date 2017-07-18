@@ -7,18 +7,17 @@ var config = {
 };
 
 var path = {
-    assets: '/assets/',
     html: '/assets/*.html',
-    sass: '/scss/*.scss',
-    mainSass: '/scss/main.scss',
+    sass: '/assets/scss/*.scss',
+    mainSass: '/assets/scss/main.scss',
+    
 
 };
 
 var source = {
-    assets: config.source + path.assets,
-    html:config.source + path.html,
-    sass: path.assets + path.sass,
-    rootSass: config.source + path.assets + path.mainSass,
+    html: config.source + path.html,
+    sass: config.source + path.sass,
+    rootSass: config.source + path.mainSass,
 };
 
 gulp.task('html', ()=> {
@@ -31,5 +30,5 @@ gulp.task("sass", function () {
     .pipe(sass({
         outputStyle: "compressed"
     }).on("error", sass.logError))
-    .pipe(gulp.dest( config.dist + path.assets+"css"));    
+    .pipe(gulp.dest( config.dist+ "css"));    
 });
