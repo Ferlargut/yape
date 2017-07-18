@@ -1,0 +1,15 @@
+.slides{
+    &.slides{
+        margin-top: 54px;
+    }
+    li{
+        background-color: white;
+        .img-slides{
+            width: 70%;
+            margin: auto;
+        }
+        .font-slider{
+            text-align: center;
+        }
+    }
+}

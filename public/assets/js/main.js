@@ -1,1 +1,3 @@
-console.log("haber");
+$(document).ready(function(){
+    $('.slider').slider();
+});
