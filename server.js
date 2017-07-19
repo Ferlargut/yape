@@ -5,6 +5,7 @@ const morgan          = require('morgan'); // Sistema de logging (muestra en la 
 const morganjson      = require('morgan-json');
 const apiUsers        = require('./api/users'); //Endpoints relacionados al User model
 
+const path = require('path');
 const app = express();
 const db  = levelup('./api/users', {valueEncoding: 'json'});
 
@@ -19,6 +20,12 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 app.use(morgan(format));
 
+app.use('/static', express.static(path.join(__dirname,'node_modules')));
+app.use('/static', express.static(path.join(__dirname,'public/img')));
+app.use('/static', express.static(path.join(__dirname,'public/assets')));
+app.use('/', express.static('public'));
+app.use('/static', express.static('public'));
+
 let router = express.Router();
 
 router.get('/', (req, res) => {
@@ -27,7 +34,9 @@ router.get('/', (req, res) => {
 
 app.use('/api',apiUsers(router,db));
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 1388;
+
+
 
 app.listen(port, () => {
   console.log('Server running on port '+port+'!');
