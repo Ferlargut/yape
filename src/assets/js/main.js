@@ -1,12 +1,15 @@
     
     var codigotel = function () {
+         var yapeUser = JSON.parse(localStorage.getItem("jsonData"));
+         var userData = yapeUser.data;
+         var $code = $("#code").val();
         if(userData.code == $code){
-       alert("fer")
+       
     }else{
-        $.post('http://localhost:1388/api/registerNumber',{
+        $.post('http://localhost:1388/api/resendCode',{
             "phone" : userData.phone, 
         }).then(function (response) {
-            console.log(response);
+            alert(response.data);
         });
     }
     }  
@@ -53,15 +56,12 @@ var enviar = function () {
 }
 var validarCode = function () {
     var yapeUser = JSON.parse(localStorage.getItem("jsonData"));
-    var userData = yapeUser.data
-    var $code = $("#code").val();    
-
+    var userData = yapeUser.data       
+    
     if(window.location.pathname == "/validarcode.html"){
         alert(userData.code);
-        $("#numeroP").text(userData.phone);
-        
-    }
- 
+        $("#numeroP").text(userData.phone);        
+    } 
      
 }
 
