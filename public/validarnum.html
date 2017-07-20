@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Yape</title>
-    <link rel="stylesheet" type="text/css" href="materialize-css/dist/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="static/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
 </head>
 <body>
     <section>
         <article>
-            <div><img src="icons/phone.png" alt="tercera-imagen"></div>
+            <div><img src="static/icons/phone.png" alt="tercera-imagen"></div>
             <h1>Para comenzar validemos tu numero</h1>
             <p>
                 Recibiras un SMS con un codigo de validacion
@@ -19,19 +19,19 @@
         </article>
         <div class="input-field col s6">
           <i class="icono prefix"></i>
-          <input id="telephone" type="tel" class="validate">
+          <input id="telephone" type="tel" class="validate" maxlength="10">
           <label for="telephone">Telephone</label>
         </div>
         <form action="#">
             <p>
-                <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-                <label for="filled-in-box">Terminos y condiciones</label>
+                <input type="checkbox" class="filled-in" id="check"  />
+                <label for="check">Terminos y condiciones</label>
             </p>
         </form>
-        <a class="waves-effect waves-light btn">button</a>
+        <a  class="waves-effect btn-validate waves-light btn disabled">button</a>
     </section>
-    <script src="jquery/dist/jquery.min.js"></script>
-    <script src="materialize-css/dist/js/materialize.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="static/jquery/dist/jquery.min.js"></script>
+    <script src="static/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="static/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yape</title>
+    <link rel="stylesheet" type="text/css" href="static/materialize-css/dist/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+</head>
+<body>
+    <article>
+        <div>
+            <img src="static/icons/message.png" alt="">
+        </div>
+        <div>
+            <h2>Ahora ingresa tu codigo</h2>
+            <p>Enviamos un SMS con el codigo de Validacion </br>
+            al numero:</p><p id="numeroP"></p>
+        </div>
+        <form>
+            <div class="input-field col s12">
+                <input id="code" type="password" class="validate">
+                <label for="code">codigo</label>
+            </div>
+            <a id="boton-codigo" class="btn btn-inicio btn-validatecode">Iniciar Registro</a>
+        </form>
+    </article>
+    <script src="static/jquery/dist/jquery.min.js"></script>
+    <script src="static/materialize-css/dist/js/materialize.min.js"></script>
+    <script src="static/js/main.js"></script>   
+</body>
+</html>
