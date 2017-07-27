@@ -1,5 +1,6 @@
     
-    var codigotel = function () {
+     
+var codigotel = function () {
          var yapeUser = JSON.parse(localStorage.getItem("jsonData"));
          var userData = yapeUser.data;
          var $code = $("#code").val();
