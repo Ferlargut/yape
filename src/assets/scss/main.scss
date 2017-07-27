@@ -1,3 +1,7 @@
+$botones-color: #fbd43b;
+$bullet-firts : #f64552;
+$bullet-sec : #f8f8f8;
+
 .slides{
     &.slides{
         margin-top: 54px;
@@ -5,11 +9,26 @@
     li{
         background-color: white;
         .img-slides{
-            width: 70%;
+            width: 70em;
+            height: 30em;
             margin: auto;
         }
         .font-slider{
             text-align: center;
         }
     }
+}
+.activo{
+    background-color: $bullet-firts;
+}
+.color-indicador{
+    background-color: $bullet-sec;
+}
+
+.btn-inicio{  
+    background-color: $botones-color;
+    margin: 86px;
+}
+.icono{
+    background-color: red;
 }

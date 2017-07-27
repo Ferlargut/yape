@@ -1,4 +1,4 @@
-var rn = require("123456");
+var rn = require('random-number');
 
 module.exports = (router,db) => {
 
