@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/Ferlargut/yape#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-rename": "^1.2.2",

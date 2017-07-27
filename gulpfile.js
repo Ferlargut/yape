@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserify = require('gulp-browserify');
 var rename = require('gulp-rename');
+var browserSync = require('browser-sync').create();
 
 var config = {
     source: './src',
@@ -42,3 +43,29 @@ gulp.task("js", function () {
     gulp.src(source.rootJS)
     .pipe(gulp.dest(config.dist + path.assets+ "js"));    
 });
+
+gulp.task("sass-w", ["sass"],function (done) {
+    browserSync.reload();
+    done();
+});
+
+gulp.task("js-w", ["js"],function (done) {
+    browserSync.reload();
+    done();
+});
+
+gulp.task("html-w", ["html"],function (done) {
+    browserSync.reload();
+    done();
+});
+
+gulp.task("server", function () {
+    browserSync.init({
+        server: {
+            baseDir: config.dist
+        }
+    });
+    gulp.watch(source.html, ["html-w"]);
+    gulp.watch(source.sass, ["sass-w"]);
+    gulp.watch(source.js, ["js-w"]);
+})
